@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="site-wrap">
+  <div class="panel-wrap animate--none">
+    <div class="panel" data-x-pos="0"  data-y-pos="0"> 
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--right-top js-up js-right">up/right</span>
+      <span class="panel_nav panel_nav--left-top js-up js-left">up/left</span>
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
+      <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <span class="panel_zoom js-zoom">View All</span>
+      <h1>Main</h1>
+      <div class="panel_animation-list">
+        <span class="js-animation active" data-animation="animate--none">None</span>
+        <span class="js-animation" data-animation="animate--shrink">Shrink</span>
+        <span class="js-animation" data-animation="animate--tilt">Tilt</span>
+        <span class="js-animation" data-animation="animate--tilt2">Tilt-2</span>
+      </div>
+    </div>
+    <div class="panel" data-x-pos="0"  data-y-pos="1">
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
+      <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Up</h1>
+    </div>
+    <div class="panel" data-x-pos="-1"  data-y-pos="1">
+      <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Up Left</h1>
+    </div>
+    <div class="panel" data-x-pos="1"  data-y-pos="1">
+      <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Up Right</h1>
+    </div>
+    <div class="panel" data-x-pos="-1"  data-y-pos="0">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--right-top js-up js-right">up/right</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Left</h1>
+    </div>
+    <div class="panel" data-x-pos="-1"  data-y-pos="-1">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--right-top js-up js-right">up/right</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <h1>Down Left</h1>
+    </div>
+    <div class="panel" data-x-pos="1"  data-y-pos="-1">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--left-top js-up js-left">up/left</span>
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <h1>Down Right</h1>
+    </div>
+    <div class="panel" data-x-pos="1"  data-y-pos="0">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--left-top js-up js-left">up/left</span>
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Right</h1>
+    </div>
+    <div class="panel" data-x-pos="0"  data-y-pos="-1">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <span class="panel_nav panel_nav--left-top js-up js-left">up/left</span>
+      <span class="panel_nav panel_nav--right-top js-up js-right">up/right</span>
+      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--right js-right">right</span>
+      <span class="panel_nav panel_nav--down js-down">down</span>
+      <h1>Down</h1>
+    </div>
+    <div class="panel" data-x-pos="0"  data-y-pos="-2">
+      <span class="panel_nav panel_nav--up js-up">up</span>
+      <h1>Down 2</h1>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+</body>
+</html>
