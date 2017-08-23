@@ -102,12 +102,10 @@ h1 {
 .panel[data-y-pos="2"] {
   top: -200%;
 }
-.panel_zoom {
+/* .panel_zoom {
   cursor: pointer;
-  left: 50%;
   opacity: .2;
   position: absolute;
-  top: 50%;
   transform: translateX(-50%) translateY(-50%) translateY(-12vmin);
   transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   user-select: none;
@@ -118,7 +116,7 @@ h1 {
 }
 .show-all .panel_zoom {
   pointer-events: none;
-}
+} */
 .panel_nav {
   cursor: pointer;
   opacity: .2;
@@ -169,10 +167,10 @@ h1 {
   opacity: 1;
 }
 .panel_animation-list {
-  font-size: 3.3vmin;
-  left: 50%;
+  font-size: 2vmin;
+  left: 25.3vmin;
   position: absolute;
-  top: 50%;
+  bottom: 13.3vmin;
   transform: translateX(-50%) translateY(-50%) translateY(14vmin);
 }
 .panel_animation-list span {
@@ -200,4 +198,38 @@ h1 {
 .panel_animation-list span.active:after,
 .panel_animation-list span:hover:after {
   border-color: white;
+}
+#homepanel{
+  background-color: #fff;
+}
+#homepanel span{
+  color: #000;
+}  
+.btn-atag{
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-size: 3.3vmin;
+}
+.menu-setup{
+  width: 100%;
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  user-select: none;
+}
+.menu-setup li{
+  padding-top: 2%;
+  z-index: 10;
+}
+.menu-setup li button{
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.menu-setup li button:hover{
+  color: #D7FF00;
+
 }

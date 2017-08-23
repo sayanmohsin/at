@@ -1,32 +1,41 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="box/styles/main.css">
+<link rel="stylesheet" type="text/css" href="box/styles/glitch-btn.css">
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-
 <div class="site-wrap">
   <div class="panel-wrap animate--none">
-    <div class="panel" data-x-pos="0"  data-y-pos="0"> 
+    <div id="homepanel" class="panel" data-x-pos="0"  data-y-pos="0""> 
       <span class="panel_nav panel_nav--up js-up">up</span>
       <span class="panel_nav panel_nav--right-top js-up js-right">up/right</span>
       <span class="panel_nav panel_nav--left-top js-up js-left">up/left</span>
-      <span class="panel_nav panel_nav--left js-left">left</span>
+      <span class="panel_nav panel_nav--left js-left">left<i class="fa fa-arrow-up" aria-hidden="true"></i></span>
       <span class="panel_nav panel_nav--right js-right">right</span>
       <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
       <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
       <span class="panel_nav panel_nav--down js-down">down</span>
-      <span class="panel_zoom js-zoom">View All</span>
-      <h1>Main</h1>
-      <div class="panel_animation-list">
-        <span class="js-animation active" data-animation="animate--none">None</span>
-        <span class="js-animation" data-animation="animate--shrink">Shrink</span>
-        <span class="js-animation" data-animation="animate--tilt">Tilt</span>
-        <span class="js-animation" data-animation="animate--tilt2">Tilt-2</span>
-      </div>
+      <!-- <span class="panel_zoom js-zoom">View All</span> -->
+      <h1><img src="box/images/atag.png" height="300px"></h1>
+
+      <div class="menu-setup">
+        <ul>
+          <li><button id="viewAll" class="btn-atag panel_zoom js-zoom"><i class="fa fa-bars" aria-hidden="true"></i></button></li>
+          <li><button id="toggle-anim" class="btn-atag"><i class="fa fa-cog" aria-hidden="true"></i></button></li>
+        </ul>  
+        <div class="panel_animation-list" style="display:none;">
+          <span class="js-animation" data-animation="animate--none">None</span>
+          <span class="js-animation active" data-animation="animate--shrink">Shrink</span>
+          <span class="js-animation" data-animation="animate--tilt">Tilt</span>
+          <span class="js-animation" data-animation="animate--tilt2">Tilt-2</span>
+        </div>
+    </div>
+
     </div>
     <div class="panel" data-x-pos="0"  data-y-pos="1">
       <span class="panel_nav panel_nav--left js-left">left</span>
@@ -92,7 +101,6 @@
   </div>
 </div>
 
-<script src="script.js"></script>
-<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+<script src="box/scripts/main.js"></script>
 </body>
 </html>

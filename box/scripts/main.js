@@ -159,6 +159,11 @@ function startOver(){
 }
 
 $(document).ready(function(){
+
+  $("#toggle-anim").click(function(){
+    $(".panel_animation-list").toggle();
+  });
+
 	$( "html" ).on( "keydown",function( event ) {
 	  if (event.which == 38){moveUp();}
 	  else if (event.which == 40){moveDown();}
