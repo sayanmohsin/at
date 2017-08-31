@@ -223,6 +223,24 @@ $(document).ready(function(){
     $(".panel_animation-list").toggle();
   });
 
+  // Note: Custom plugin(mousewheel event) since the scolling is disabled(sayan)
+  $('html').on('mousewheel', function(event) {
+    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+    var deltaX = event.deltaX;
+    var deltaY = event.deltaY;
+
+    var scrolledUp = deltaY > 0;
+    var scrolledDown = deltaY < 0;
+    if ( scrolledUp ){  
+      moveUp();
+    }
+    if ( scrolledDown ){  
+      moveDown();
+    }
+
+  });
+  
 	$( "html" ).on( "keydown",function( event ) {
 	  if (event.which == 38){moveUp();}
 	  else if (event.which == 40){moveDown();}
