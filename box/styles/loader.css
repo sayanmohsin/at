@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+#loader-wrap {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  background: #fff;
+}
+
+#bar {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 1%;
+  width: 100%;
+  background-color: #000;
+  -moz-transition: left 0.1s; 
+  -o-transition: left 0.1s; 
+  -webkit-transition: left 0.1s;
+  transition: left 0.1s;
+}
+
+#loader {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  height: 100px;
+  width: 840px;
+  margin: -120px 0 0 -420px;
+}
+
+#logo-loader {
+  opacity: 1;
+  font: bold 24px/60px "Droid Serif", serif;
+}
+
+#logo-loader img{
+  z-index: 99;
+  height: 300px;
+}
+
+#logo-loader {
+  height: 10em;
+  position: relative 
+}
+
+#logo-loader img
+{
+  margin: 150px 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+
+#recipe {
+  height: 100px;
+  margin: auto;
+  font-family: 'Questrial', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}

@@ -1,14 +1,13 @@
+/* last update by sayan */
 body {
   background-color: black;
-  background-image: url('https://i.imgsafe.org/6c147abfa3.jpg');
   background-repeat: repeat;
-  color: white;
+  /* color: white; */
   font-family: 'Oswald', sans-serif;
   letter-spacing: .2rem;
   margin: 0;
   overflow: hidden;
   perspective: 1000px;
-  text-transform: uppercase;
 }
 .site-wrap {
   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -34,6 +33,7 @@ h1 {
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0.3s;
 }
 .panel {
+  text-transform: uppercase;
   height: 100vh;
   position: absolute;
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
@@ -168,9 +168,9 @@ h1 {
 }
 .panel_animation-list {
   font-size: 2vmin;
-  left: 25.3vmin;
+  left: 33.3vmin;
   position: absolute;
-  bottom: 13.3vmin;
+  bottom: 15.7vmin;
   transform: translateX(-50%) translateY(-50%) translateY(14vmin);
 }
 .panel_animation-list span {
@@ -199,11 +199,15 @@ h1 {
 .panel_animation-list span:hover:after {
   border-color: white;
 }
+.show-all h1{
+  font-size: 20vmin;
+}
+/* styles for homepage panel */
 #homepanel{
-  background-color: #fff;
+  background-color: #000000;
 }
 #homepanel span{
-  color: #000;
+  color: #FFFFFF;
 }  
 .btn-atag{
   background: transparent;
@@ -211,6 +215,9 @@ h1 {
   color: #000000;
   font-size: 3.3vmin;
 }
+/* .homepanel-add{
+  color: #fff;
+} */
 .menu-setup{
   width: 100%;
   position: absolute;
@@ -218,11 +225,15 @@ h1 {
   bottom: 10%;
   user-select: none;
 }
+.menu-setup ul{
+  list-style-type: none;
+}
 .menu-setup li{
   padding-top: 2%;
   z-index: 10;
 }
 .menu-setup li button{
+  color: #fff;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -231,5 +242,54 @@ h1 {
 }
 .menu-setup li button:hover{
   color: #D7FF00;
-
+}
+/* styles for about panel */
+#aboutpanel{
+  background-color: #fff;
+  color: #000;
+}
+#aboutpanel span{
+  opacity: 0.5;
+}  
+.subpanel p{
+  font-family: 'Questrial', sans-serif;
+  text-transform: none;
+  font-size: 2.5vmin;
+}
+.subpanel h1{
+  font-size: 5vmin;
+}
+/* .aboutpanel-add{
+  color: #000;
+} */
+#aboutpanel .left-content{
+  margin-top: 5%;
+  margin-left: 7%;
+  float: left;
+  width: 80%;
+}
+#aboutpanel .right-content{
+  margin-top: 10%;
+  margin-right: 20%;
+  float: right;
+  width: 50%;
+}
+#aboutpanel .right-content ul li{
+  padding: 10%;
+  list-style: none;
+}  
+/* styles for info-div panel */
+.info-div{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+.info-div li{
+  font-size: 1.5vmin;
+}  
+.fa-info-circle{
+  position: fixed;
+  cursor: pointer;
+  bottom: 15%;
+  right: 2%;
 }

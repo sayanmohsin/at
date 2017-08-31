@@ -1,3 +1,30 @@
+jQuery.fn.onPositionChanged = function (trigger, millis) {
+  if (millis == null) millis = 100;
+  var o = $(this[0]); // our jquery object
+  if (o.length < 1) return o;
+
+  var lastPos = null;
+  var lastOff = null;
+  setInterval(function () {
+      if (o == null || o.length < 1) return o; // abort if element is non existend eny more
+      if (lastPos == null) lastPos = o.position();
+      if (lastOff == null) lastOff = o.offset();
+      var newPos = o.position();
+      var newOff = o.offset();
+      if (lastPos.top != newPos.top || lastPos.left != newPos.left) {
+          $(this).trigger('onPositionChanged', { lastPos: lastPos, newPos: newPos });
+          if (typeof (trigger) == "function") trigger(lastPos, newPos);
+          lastPos = o.position();
+      }
+      if (lastOff.top != newOff.top || lastOff.left != newOff.left) {
+          $(this).trigger('onOffsetChanged', { lastOff: lastOff, newOff: newOff});
+          if (typeof (trigger) == "function") trigger(lastOff, newOff);
+          lastOff= o.offset();
+      }
+  }, millis);
+  return o;
+};
+
 // Global
 var win = window,
     doc = document;
@@ -55,7 +82,7 @@ function moveUp(){
   addClass(wrap, 'animate');
   if(pos_y<1){
 	  pos_y++;
-	  setPos();
+    setPos();
   }		
 }
 
@@ -78,8 +105,8 @@ function moveRight(){
 function moveDown(){
 	addClass(wrap, 'animate');
 	if(pos_y>-2){
-		pos_y--;
-		setPos();
+    pos_y--;
+    setPos();
 	}
 }
 
@@ -158,7 +185,17 @@ function startOver(){
   setPos();
 }
 
-$(document).ready(function(){
+
+
+$(document).ready(function(){ 
+
+  $(".fa-info-circle").click(function(){
+    $("#info-text").fadeToggle();
+  }); 
+
+  setTimeout(function(){
+    $("#info-text").fadeOut();
+   }, 5000);
 
   $("#toggle-anim").click(function(){
     $(".panel_animation-list").toggle();
@@ -170,6 +207,10 @@ $(document).ready(function(){
 	  else if (event.which == 37){moveLeft();}
 	  else if (event.which == 39){moveRight();}
 	  else if (event.which == 13){startOver();}
-	  else if (event.which == 27){zoomOut(event)}
+    else if (event.which == 27){zoomOut(event)}
+    else if (event.which == 73){$("#info-text").fadeToggle();}
 	});
 });	
+
+
+
