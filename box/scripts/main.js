@@ -144,6 +144,7 @@ function zoomOut(e){
 function setPanelAndZoom(e){
   pos_x = -e.target.getAttribute('data-x-pos'),
   pos_y = e.target.getAttribute('data-y-pos');
+  findPanel(pos_x,pos_y);
   setPos();
   zoomIn();
 }
@@ -167,34 +168,34 @@ function startOver(){
 
 function findPanel(pos_x,pos_y){
   var panelNum;
-  if(pos_x === 0 && pos_y === 0){
+  if(pos_x == 0 && pos_y == 0){
     panelNum = 0;
   }
-  else if(pos_x === 0 && pos_y === 1){
+  else if(pos_x == 0 && pos_y == 1){
     panelNum = 1;
   } 
-  else if(pos_x === -1 && pos_y === 1){
+  else if(pos_x == -1 && pos_y == 1){
     panelNum = 2;
   } 
-  else if(pos_x === 1 && pos_y === 1){
+  else if(pos_x == 1 && pos_y == 1){
     panelNum = 3;
   } 
-  else if(pos_x === -1 && pos_y === 0){
+  else if(pos_x == -1 && pos_y == 0){
     panelNum = 4;
   }
-  else if(pos_x === 1 && pos_y === 0){
+  else if(pos_x == 1 && pos_y == 0){
     panelNum = 5;
   }
-  else if(pos_x === 0 && pos_y === -1){
+  else if(pos_x == 0 && pos_y == -1){
     panelNum = 6;
   }
-  else if(pos_x === -1 && pos_y === -1){
+  else if(pos_x == -1 && pos_y == -1){
     panelNum = 7;
   }
-  else if(pos_x === 1 && pos_y === -1){
+  else if(pos_x == 1 && pos_y == -1){
     panelNum = 8;
   }
-  else if(pos_x === 0 && pos_y === -2){
+  else if(pos_x == 0 && pos_y == -2){
     panelNum = 9;
   }
   changeStyle(panelNum);
@@ -205,15 +206,15 @@ function changeStyle(panelNum){
     $(".fixed-menu").css("color", "white"); 
     $(".btn-atag").css("color", "white"); 
   }
-  if(panelNum == 1){ 
+  else if(panelNum == 1){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
-  if(panelNum == 2){ 
+  else if(panelNum == 2){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
-  if(panelNum == 3){ 
+  else if(panelNum == 3){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
