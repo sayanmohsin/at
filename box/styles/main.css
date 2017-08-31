@@ -124,6 +124,7 @@ h1 {
   transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   user-select: none;
   will-change: opacity;
+  font-size: 4vmin;
 }
 .panel_nav--up {
   left: 50%;
@@ -234,7 +235,7 @@ h1 {
   font-size: 2.5vmin;
 }
 .subpanel h1{
-  font-size: 5vmin;
+  font-size: 10vmin;
 }
 /* .aboutpanel-add{
   color: #000;
@@ -256,6 +257,42 @@ h1 {
   padding: 10%;
   list-style: none;
 }  
+#aboutpanel .panel_nav--right {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#aboutpanel .panel_nav--right:hover i{
+  display: none;
+}
+#aboutpanel .panel_nav--right:hover {
+  transform: translateY(0%) rotate(0deg) translateX(0%);
+  transform-origin: top right;
+  color: #4666FF;
+}
+#aboutpanel .panel_nav--left {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#aboutpanel .panel_nav--left:hover i{
+  display: none;
+}
+#aboutpanel .panel_nav--left:hover {
+  transform: translateY(0%) rotate(0deg) translateX(0%);
+  transform-origin: top right;
+  color: #FD5F00;
+}
+/* styles for ds panel */
+#dspanel{
+  background-color: #FD5F00;
+}
+/* styles for aoc panel */
+#aocpanel{
+  background-color: #4666FF;
+}
 /* styles for info-div panel */
 .fixed-menu{
   color: #fff;
