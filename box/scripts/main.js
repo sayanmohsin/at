@@ -133,6 +133,7 @@ for (var x = 0; x < zoom.length; x++){
 function zoomOut(e){
   e.stopPropagation();
   addClass(site, 'show-all');
+  $(".subpanel h1").addClass("show-all-title");
   for (var x = 0; x < panel.length; x++){
     ( function(_x){
       panel[_x].addEventListener('click', setPanelAndZoom);
@@ -152,6 +153,7 @@ function zoomIn(){
   for (var x = 0; x < panel.length; x++){
     panel[x].removeEventListener('click', setPanelAndZoom);
   }
+  $(".subpanel h1").removeClass("show-all-title");
   removeClass(site, 'show-all');
 }
 
@@ -204,6 +206,14 @@ function changeStyle(panelNum){
     $(".btn-atag").css("color", "white"); 
   }
   if(panelNum == 1){ 
+    $(".fixed-menu").css("color", "black"); 
+    $(".btn-atag").css("color", "black"); 
+  }
+  if(panelNum == 2){ 
+    $(".fixed-menu").css("color", "black"); 
+    $(".btn-atag").css("color", "black"); 
+  }
+  if(panelNum == 3){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }

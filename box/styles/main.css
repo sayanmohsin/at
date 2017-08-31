@@ -203,9 +203,6 @@ h1 {
 .panel_animation-list span:hover:after {
   border-color: white;
 }
-.show-all h1{
-  font-size: 20vmin;
-}
 /* styles for homepage panel */
 #homepanel{
   background-color: #000000;
@@ -236,6 +233,9 @@ h1 {
 }
 .subpanel h1{
   font-size: 10vmin;
+}
+.show-all-title{
+  font-size: 20vmin !important;
 }
 /* .aboutpanel-add{
   color: #000;
