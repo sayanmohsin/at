@@ -167,11 +167,14 @@ h1 {
   opacity: 1;
 }
 .panel_animation-list {
-  font-size: 2vmin;
-  left: 33.3vmin;
+  font-size: 1.5vmin;
+  left: 25.3vmin;
   position: absolute;
-  bottom: 15.7vmin;
+  bottom: 16.7vmin;
   transform: translateX(-50%) translateY(-50%) translateY(14vmin);
+}
+.info-div li{
+  list-style-type: none;
 }
 .panel_animation-list span {
   cursor: pointer;
@@ -210,43 +213,17 @@ h1 {
   color: #FFFFFF;
 }  
 .btn-atag{
+  color: white;
   background: transparent;
   border: none;
-  color: #000000;
   font-size: 3.3vmin;
 }
 /* .homepanel-add{
   color: #fff;
 } */
-.menu-setup{
-  width: 100%;
-  position: absolute;
-  left: 5%;
-  bottom: 10%;
-  user-select: none;
-}
-.menu-setup ul{
-  list-style-type: none;
-}
-.menu-setup li{
-  padding-top: 2%;
-  z-index: 10;
-}
-.menu-setup li button{
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.menu-setup li button:hover{
-  color: #D7FF00;
-}
 /* styles for about panel */
 #aboutpanel{
   background-color: #fff;
-  color: #000;
 }
 #aboutpanel span{
   opacity: 0.5;
@@ -269,8 +246,9 @@ h1 {
   width: 80%;
 }
 #aboutpanel .right-content{
-  margin-top: 10%;
-  margin-right: 20%;
+  margin-top: 25%;
+  margin-right: 10%;
+  font-size: 3vmin;
   float: right;
   width: 50%;
 }
@@ -279,17 +257,53 @@ h1 {
   list-style: none;
 }  
 /* styles for info-div panel */
-.info-div{
+.fixed-menu{
+  color: #fff;
   position: fixed;
+  width: 90%;
+  left: 5%;  
+  height: 12%;
+  bottom: 7%;
+}
+.menu-setup{
+  width: 80%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  user-select: none;
+}
+.menu-setup ul{
+  list-style-type: none;
+}
+.menu-setup li{
+  padding-top: 2%;
+  z-index: 10;
+}
+.menu-setup li button{
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.menu-setup li button:hover{
+  color: #D7FF00;
+}
+.info-div{
+  position: absolute;
   bottom: 5%;
   right: 5%;
 }
 .info-div li{
   font-size: 1.5vmin;
 }  
+.info-div-purp{
+  font-weight: bold;
+  letter-spacing: 0.5vmin;
+}
 .fa-info-circle{
   position: fixed;
   cursor: pointer;
-  bottom: 15%;
-  right: 2%;
+  bottom: 16%;
+  right: 5%;
 }

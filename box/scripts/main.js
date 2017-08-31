@@ -1,30 +1,3 @@
-jQuery.fn.onPositionChanged = function (trigger, millis) {
-  if (millis == null) millis = 100;
-  var o = $(this[0]); // our jquery object
-  if (o.length < 1) return o;
-
-  var lastPos = null;
-  var lastOff = null;
-  setInterval(function () {
-      if (o == null || o.length < 1) return o; // abort if element is non existend eny more
-      if (lastPos == null) lastPos = o.position();
-      if (lastOff == null) lastOff = o.offset();
-      var newPos = o.position();
-      var newOff = o.offset();
-      if (lastPos.top != newPos.top || lastPos.left != newPos.left) {
-          $(this).trigger('onPositionChanged', { lastPos: lastPos, newPos: newPos });
-          if (typeof (trigger) == "function") trigger(lastPos, newPos);
-          lastPos = o.position();
-      }
-      if (lastOff.top != newOff.top || lastOff.left != newOff.left) {
-          $(this).trigger('onOffsetChanged', { lastOff: lastOff, newOff: newOff});
-          if (typeof (trigger) == "function") trigger(lastOff, newOff);
-          lastOff= o.offset();
-      }
-  }, millis);
-  return o;
-};
-
 // Global
 var win = window,
     doc = document;
@@ -81,7 +54,8 @@ setPos();
 function moveUp(){
   addClass(wrap, 'animate');
   if(pos_y<1){
-	  pos_y++;
+    pos_y++;
+    findPanel(pos_x,pos_y);
     setPos();
   }		
 }
@@ -89,7 +63,8 @@ function moveUp(){
 function moveLeft(){
   addClass(wrap, 'animate');
   if(pos_x<1){
-	  pos_x++;
+    pos_x++;
+    findPanel(pos_x,pos_y);
 	  setPos();
   }		
 }
@@ -97,7 +72,8 @@ function moveLeft(){
 function moveRight(){
 	addClass(wrap, 'animate');
 	if(pos_x>-1){
-		pos_x--;
+    pos_x--;
+    findPanel(pos_x,pos_y);
 		setPos();
 	}  
 }
@@ -106,6 +82,7 @@ function moveDown(){
 	addClass(wrap, 'animate');
 	if(pos_y>-2){
     pos_y--;
+    findPanel(pos_x,pos_y);
     setPos();
 	}
 }
@@ -182,10 +159,55 @@ function startOver(){
   addClass(wrap, 'animate');
   pos_x = 0,
   pos_y = 0;
+  findPanel(pos_x,pos_y);
   setPos();
 }
 
+function findPanel(pos_x,pos_y){
+  var panelNum;
+  if(pos_x === 0 && pos_y === 0){
+    panelNum = 0;
+  }
+  else if(pos_x === 0 && pos_y === 1){
+    panelNum = 1;
+  } 
+  else if(pos_x === -1 && pos_y === 1){
+    panelNum = 2;
+  } 
+  else if(pos_x === 1 && pos_y === 1){
+    panelNum = 3;
+  } 
+  else if(pos_x === -1 && pos_y === 0){
+    panelNum = 4;
+  }
+  else if(pos_x === 1 && pos_y === 0){
+    panelNum = 5;
+  }
+  else if(pos_x === 0 && pos_y === -1){
+    panelNum = 6;
+  }
+  else if(pos_x === -1 && pos_y === -1){
+    panelNum = 7;
+  }
+  else if(pos_x === 1 && pos_y === -1){
+    panelNum = 8;
+  }
+  else if(pos_x === 0 && pos_y === -2){
+    panelNum = 9;
+  }
+  changeStyle(panelNum);
+}
 
+function changeStyle(panelNum){
+  if(panelNum == 0){ 
+    $(".fixed-menu").css("color", "white"); 
+    $(".btn-atag").css("color", "white"); 
+  }
+  if(panelNum == 1){ 
+    $(".fixed-menu").css("color", "black"); 
+    $(".btn-atag").css("color", "black"); 
+  }
+}  
 
 $(document).ready(function(){ 
 
