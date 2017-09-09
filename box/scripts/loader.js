@@ -35,12 +35,14 @@
             $("#loader-wrap").hide();
             $("#site-wrap").show();
             $("#toggle-music").html('<i class="fa fa-play" aria-hidden="true"></i>');
+            $("#bgvid")[0].play();
           },
           onApprove : function() {
             $("#loader-wrap").hide();
             $("#audio")[0].play();
             $("#site-wrap").show();
             $("#toggle-music").html('<i class="fa fa-pause" aria-hidden="true"></i>');
+            $("#bgvid")[0].play();
           }
         })
         .modal('show')
