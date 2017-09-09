@@ -221,17 +221,36 @@ function changeStyle(panelNum){
 }  
 
 $(document).ready(function(){ 
-
   $(".fa-info-circle").click(function(){
     $("#info-text").fadeToggle();
   }); 
 
+  $("#toggle-music").click(function(){
+    if( $( "#toggle-music i" ).attr( "class" ) == 'fa fa-play' ){
+      $("#audio")[0].play();
+      $("#toggle-music").html('<i class="fa fa-pause" aria-hidden="true"></i>');
+    }
+    else if( $( "#toggle-music i" ).attr( "class" ) == 'fa fa-pause' ){
+      $("#audio")[0].pause();
+      $("#toggle-music").html('<i class="fa fa-play" aria-hidden="true"></i>');
+    }  
+
+  });
+
   setTimeout(function(){
     $("#info-text").fadeOut();
+    $(".panel_animation-list").fadeOut();
    }, 5000);
 
   $("#toggle-anim").click(function(){
     $(".panel_animation-list").toggle();
+  });
+
+  $("#homepanel .panel_nav--up").hover(function() {
+    if ($(this).text() == "WHO WE ARE?")
+       $(this).text("ABOUT")
+    else
+       $(this).text("WHO WE ARE?");
   });
 
   // Note: Custom plugin(mousewheel event) since the scolling is disabled(sayan)

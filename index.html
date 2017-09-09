@@ -6,9 +6,14 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
 crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="box/Semantic-UI/semantic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="box/Semantic-UI/semantic.min.css" rel="stylesheet">
+<audio id="audio" loop>
+    <!-- <source src=".ogg" type="audio/ogg"> -->
+    <source src="box/audio/audio.mp3" type="audio/mpeg">
+</audio>
 </head>
 <body>
 <div id="loader-wrap">  
@@ -22,9 +27,33 @@ crossorigin="anonymous"></script>
   </div>  
 </div> 
 
+<div id="modalAlert" class="ui basic modal">
+  <div class="ui icon header">
+    <i class="music icon"></i>
+  </div>
+  <div class="content">
+    <p>Can we play some music?</p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic cancel inverted button">
+      <i class="volume off icon"></i>
+      Nope
+    </div>
+    <div class="ui green ok inverted button">
+      <i class="volume up icon"></i>
+      Yeah
+    </div>
+  </div>
+</div>
+
 <div id="site-wrap" class="site-wrap" style="display:none;">
   <div class="panel-wrap animate--none">
     <div id="homepanel" class="panel" data-x-pos="0"  data-y-pos="0"> 
+        <video poster="" id="bgvid" playsinline autoplay muted loop>
+          <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        <!-- <source src="" type="video/webm"> -->
+        <source src="box/video/video.mp4" type="video/mp4">
+        </video>
       <span class="panel_nav panel_nav--up js-up">ABOUT <i class="fa fa-caret-up" aria-hidden="true"></i></span>
       <span class="panel_nav panel_nav--right-top js-up js-right"><i class="fa fa-caret-up right-top-icon" aria-hidden="true"></i> ART OF<br>CODING</span>
       <span class="panel_nav panel_nav--left-top js-up js-left">DIGITAL<br>STRATEGY <i class="fa fa-caret-up left-top-icon" aria-hidden="true"></i></span>
@@ -34,7 +63,10 @@ crossorigin="anonymous"></script>
       <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
       <span class="panel_nav panel_nav--down js-down">down</span>
       <!-- <span class="panel_zoom js-zoom">View All</span> -->
-      <h1><img src="box/images/atagw.png" height="300px"></h1>   
+      <header class="main-header">
+        <h1><img src="box/images/atagw.png" height="300px"></h1>   
+        <p>Building Digital Existence</p>
+      </header>
     </div>
     <div id="aboutpanel" class="panel subpanel" data-x-pos="0"  data-y-pos="1">
       <span class="panel_nav panel_nav--left js-left">DIGITAL<br>STRATEGY <i class="fa fa-caret-up" aria-hidden="true"></i></span>
@@ -110,6 +142,7 @@ crossorigin="anonymous"></script>
       <ul>
         <li><button id="viewAll" class="btn-atag panel_zoom js-zoom"><i class="fa fa-bars" aria-hidden="true"></i></button></li>
         <li><button id="toggle-anim" class="btn-atag"><i class="fa fa-cog" aria-hidden="true"></i></button></li>
+        <li><button id="toggle-music" class="btn-atag"></button></li>
       </ul>  
       <div class="panel_animation-list" style="display:none;">
         <span class="js-animation" data-animation="animate--none">None</span>

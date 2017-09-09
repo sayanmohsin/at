@@ -9,6 +9,25 @@ body {
   overflow: hidden;
   perspective: 1000px;
 }
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100vh;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+  opacity: 0.6;
+  object-fit: fill;
+}
+#modalAlert p{
+  text-align: center;
+}
 .site-wrap {
   transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
@@ -22,6 +41,21 @@ body {
 h1 {
   font-size: 20vmin;
   margin: 0;
+}
+.main-header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  /* color: #fff; */
+  line-height: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+.main-header p{
+  font-family: 'Questrial', sans-serif !important;
+  font-size: 16px;
+  padding-top: 90%;
+  color: fff;
 }
 .panel-wrap {
   perspective: 2000px;
@@ -119,7 +153,7 @@ h1 {
 } */
 .panel_nav {
   cursor: pointer;
-  opacity: .2;
+  opacity: .6;
   position: absolute;
   transition: opacity 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   user-select: none;
@@ -169,9 +203,9 @@ h1 {
 }
 .panel_animation-list {
   font-size: 1.5vmin;
-  left: 25.3vmin;
+  left: 23.7vmin;
   position: absolute;
-  bottom: 16.7vmin;
+  bottom: 20.7vmin;
   transform: translateX(-50%) translateY(-50%) translateY(14vmin);
 }
 .left-top-icon{

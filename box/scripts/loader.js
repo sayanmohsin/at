@@ -26,8 +26,28 @@
           'font-size': '24px',
           'color': '#333'
         });
-        $("#loader-wrap").hide();
-        $("#site-wrap").show();
+      
+
+        $('.ui.basic.modal')
+        .modal({
+          closable  : false,
+          onDeny    : function(){
+            $("#loader-wrap").hide();
+            $("#site-wrap").show();
+            $("#toggle-music").html('<i class="fa fa-play" aria-hidden="true"></i>');
+          },
+          onApprove : function() {
+            $("#loader-wrap").hide();
+            $("#audio")[0].play();
+            $("#site-wrap").show();
+            $("#toggle-music").html('<i class="fa fa-pause" aria-hidden="true"></i>');
+          }
+        })
+        .modal('show')
+      ;
+
+
+        
         // return $(this).text("loaded").fadeIn(500);
       });
     } else {
