@@ -49,11 +49,11 @@ crossorigin="anonymous"></script>
 <div id="site-wrap" class="site-wrap" style="display:none;">
   <div class="panel-wrap animate--none">
     <div id="homepanel" class="panel" data-x-pos="0"  data-y-pos="0"> 
-        <video poster="" id="bgvid" playsinline muted loop oncontextmenu="return false;">
-          <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+      <video poster="" id="bgvid" playsinline muted loop oncontextmenu="return false;">
+        <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
         <source src="box/video/video.webm" type="video/webm">
         <source src="box/video/video.mp4" type="video/mp4">
-        </video>
+      </video>
       <span class="panel_nav panel_nav--up js-up">ABOUT <i class="fa fa-caret-up" aria-hidden="true"></i></span>
       <span class="panel_nav panel_nav--right-top js-up js-right"><i class="fa fa-caret-up right-top-icon" aria-hidden="true"></i> TEAM</span>
       <span class="panel_nav panel_nav--left-top js-up js-left">CAREERS <i class="fa fa-caret-up left-top-icon" aria-hidden="true"></i></span>
@@ -74,14 +74,21 @@ crossorigin="anonymous"></script>
       <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
       <span class="panel_nav panel_nav--left-down js-down js-left">down/left</span>
       <span class="panel_nav panel_nav--down js-down">ancatag</span>
-      <h1>ABOUT</h1>
-      <div class="right-content">
-          <!-- <i class="fa fa-caret-left" aria-hidden="true"></i>business services<i class="fa fa-caret-right" aria-hidden="true"></i> -->
-       <p>Ancatag Technologies Pvt. Ltd is an IT firm that aims to bring people and technology together. This is the only combination that will take us ahead.</p>            
-     </div>  
-      <div class="left-content">
-        <p> With the growing world in front of us, we all need the help of the right technology at the right time with the support of right people. This will make a big difference to your business. Ancatag has the technological expertise to walk you through your  business transformation.</p>
-      </div>     
+      <div class="card">
+        <div class="card-content">
+        <h1>ABOUT</h1>
+          <div class="top-content">
+            <!-- <i class="fa fa-caret-left" aria-hidden="true"></i>business services<i class="fa fa-caret-right" aria-hidden="true"></i> -->
+            <p class="related">Ancatag Technologies Pvt. Ltd is an IT firm that aims to bring people and technology together. 
+            This is the only combination that will take us ahead. With the growing world in front of us.</p>            
+          </div>  
+          <div class="bottom-content">
+            <p class="related">We all need the help of the right technology at the right time with the support of right people. 
+            This will make a big difference to your business. 
+            Ancatag has the technological expertise to walk you through your  business transformation.</p>
+          </div>   
+        </div> <!-- card-content -->
+      </div> <!-- card -->
     </div>
     <div class="panel subpanel" data-x-pos="-1"  data-y-pos="1">
       <span class="panel_nav panel_nav--right-down js-down js-right">down/right</span>
@@ -154,17 +161,17 @@ crossorigin="anonymous"></script>
     </div>
     <div class="info-div">
       <i class="fa fa-info-circle" aria-hidden="true"></i>
-      <ul id="info-text">
-        Keyboard Map
-        <li><span class="info-div-purp"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <p id="info-text">
+        <span>Keyboard Map:</span>
+        <span class="info-div-purp"><i class="fa fa-arrow-up" aria-hidden="true"></i>
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
           <i class="fa fa-arrow-down" aria-hidden="true"></i>
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </span>Navigation</li>
-        <li><span class="info-div-purp">ENTER:</span> Home</li> 
-        <li><span class="info-div-purp">ESC:</span> Menu</li>
-        <li><span class="info-div-purp">I:</span> Info</li>
-      </ul>
+        </span>for Navigation,
+        <span class="info-div-purp">ENTER</span> for Home,
+        <span class="info-div-purp">ESC</span> for Menu,
+        <span class="info-div-purp">I</span> for Info
+      </p>
     </div>  
   </div> 
 </div>
