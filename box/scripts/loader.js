@@ -69,8 +69,8 @@
 
   rotater = setInterval(rotate, 4000);
 
-  //fakeLoader = setInterval(fakeLoad, 20);
-  fakeLoader = setInterval(fakeLoad, 1);
+  fakeLoader = setInterval(fakeLoad, 20);
+  //fakeLoader = setInterval(fakeLoad, 1);
   incLoad = function() {
     gray.attr('data-loader', Math.floor(percentage));
     return orange.css({
