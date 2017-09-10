@@ -36,6 +36,7 @@
             $("#site-wrap").show();
             $("#toggle-music").html('<i class="fa fa-play" aria-hidden="true"></i>');
             $("#bgvid")[0].play();
+            $("#info-text").fadeIn();
           },
           onApprove : function() {
             $("#loader-wrap").hide();
@@ -43,13 +44,11 @@
             $("#site-wrap").show();
             $("#toggle-music").html('<i class="fa fa-pause" aria-hidden="true"></i>');
             $("#bgvid")[0].play();
+            $("#info-text").fadeIn();
           }
         })
         .modal('show')
       ;
-
-
-        
         // return $(this).text("loaded").fadeIn(500);
       });
     } else {
@@ -70,8 +69,8 @@
 
   rotater = setInterval(rotate, 4000);
 
-  fakeLoader = setInterval(fakeLoad, 20);
-  //fakeLoader = setInterval(fakeLoad, 1);
+  //fakeLoader = setInterval(fakeLoad, 20);
+  fakeLoader = setInterval(fakeLoad, 1);
   incLoad = function() {
     gray.attr('data-loader', Math.floor(percentage));
     return orange.css({

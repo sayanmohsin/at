@@ -210,11 +210,11 @@ function changeStyle(panelNum){
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
-  else if(panelNum == 2){ 
+  else if(panelNum == 4){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
-  else if(panelNum == 3){ 
+  else if(panelNum == 5){ 
     $(".fixed-menu").css("color", "black"); 
     $(".btn-atag").css("color", "black"); 
   }
@@ -234,13 +234,12 @@ $(document).ready(function(){
       $("#audio")[0].pause();
       $("#toggle-music").html('<i class="fa fa-play" aria-hidden="true"></i>');
     }  
-
   });
 
   setTimeout(function(){
-    $("#info-text").fadeOut();
     $(".panel_animation-list").fadeOut();
-   }, 5000);
+    $("#info-text").fadeOut();
+   }, 8000);
 
   $("#toggle-anim").click(function(){
     $(".panel_animation-list").toggle();
