@@ -207,8 +207,8 @@ function changeStyle(panelNum){
     $(".btn-atag").css("color", "white"); 
   }
   else if(panelNum == 1){ 
-    $(".fixed-menu").css("color", "black"); 
-    $(".btn-atag").css("color", "black"); 
+    $(".fixed-menu").css("color", "white"); 
+    $(".btn-atag").css("color", "white"); 
   }
   else if(panelNum == 4){ 
     $(".fixed-menu").css("color", "black"); 

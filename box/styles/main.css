@@ -29,7 +29,7 @@ video {
 #canvas-aboutpanel {
   width: 100%;
   height: 100vh;
-  background: #F3F315;
+  background: #000000;
   position: fixed;
 }
 /* card anim start*/
@@ -340,7 +340,8 @@ h1 {
 } */
 /* styles for about panel */
 #aboutpanel{
-  background-color: #F3F315;
+  color: #FFFFFF;
+  background-color: #000000;
 }
 #aboutpanel span{
   opacity: 0.5;
