@@ -26,6 +26,12 @@ video {
   opacity: 0.6;
   object-fit: fill;
 }
+#canvas-aboutpanel {
+  width: 100%;
+  height: 100vh;
+  background: #F3F315;
+  position: fixed;
+}
 /* card anim start*/
 .card {
   pointer-events: none;
@@ -348,6 +354,15 @@ h1 {
   font-size: 10vmin;
   left: 40%;
 }
+.subpanel p:before {
+  position: absolute;
+  left: -60px;
+  margin-top: 16px;
+  content: "";
+  background-color: #5bc5c3;
+  height: 1px;
+  width: 45px;
+}  
 .show-all-title{
   font-size: 20vmin !important;
 }
@@ -439,3 +454,4 @@ h1 {
   bottom: 7.5vmin;
   right: 2%;
 }
+
