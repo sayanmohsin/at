@@ -37,6 +37,7 @@ var nav_up = doc.getElementsByClassName('js-up'),
     nav_down = doc.getElementsByClassName('js-down');
 
 var animation = doc.getElementsByClassName('js-animation');
+toggleAnimation(1);
 
 // Tracking
 var pos_x = 0,
@@ -109,6 +110,7 @@ for (var x = 0; x < animation.length; x++){
   ( function(_x){
     animation[_x].addEventListener('click', function(){
       toggleAnimation(_x);
+      toggleAnimation(2);
     });
   })(x);
 }
@@ -134,6 +136,7 @@ function zoomOut(e){
   e.stopPropagation();
   addClass(site, 'show-all');
   $(".subpanel h1").addClass("show-all-title");
+  $(".all-content").addClass("hide-all-content");
   for (var x = 0; x < panel.length; x++){
     ( function(_x){
       panel[_x].addEventListener('click', setPanelAndZoom);
@@ -142,6 +145,7 @@ function zoomOut(e){
 }
 
 function setPanelAndZoom(e){
+  console.log(e);
   pos_x = -e.target.getAttribute('data-x-pos'),
   pos_y = e.target.getAttribute('data-y-pos');
   findPanel(pos_x,pos_y);
@@ -155,6 +159,7 @@ function zoomIn(){
     panel[x].removeEventListener('click', setPanelAndZoom);
   }
   $(".subpanel h1").removeClass("show-all-title");
+  $(".all-content").removeClass("hide-all-content");
   removeClass(site, 'show-all');
 }
 
@@ -245,12 +250,26 @@ $(document).ready(function(){
     $(".panel_animation-list").toggle();
   });
 
-  $("#homepanel .panel_nav--up").hover(function() {
-    if ($(this).text() == "WHO WE ARE?")
-       $(this).text("ABOUT")
-    else
-       $(this).text("WHO WE ARE?");
-  });
+  $('#homepanel .panel_nav--up').hover(function(){
+      $main_text = $(this).html();
+      $(this).text("WHO WE ARE?");
+    },function(){
+      $(this).html($main_text);
+    });
+  
+    $('#homepanel .panel_nav--left').hover(function(){
+      $main_text = $(this).text();
+      $(this).text("GET NOTICED");
+    },function(){
+      $(this).text($main_text);
+    });
+
+    $('#homepanel .panel_nav--right').hover(function(){
+      $main_text = $(this).text();
+      $(this).text("GET CREATED");
+    },function(){
+      $(this).text($main_text);
+    });
 
   // Note: Custom plugin(mousewheel event) since the scolling is disabled(sayan)
   $('html').on('mousewheel', function(event) {
@@ -261,13 +280,13 @@ $(document).ready(function(){
 
     var scrolledUp = deltaY > 0;
     var scrolledDown = deltaY < 0;
+    
     if ( scrolledUp ){  
-      moveUp();
+      moveLeft(); 
     }
     if ( scrolledDown ){  
-      moveDown();
-    }
-
+      moveRight();
+    }  
   });
   
 	$( "html" ).on( "keydown",function( event ) {

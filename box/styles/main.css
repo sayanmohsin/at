@@ -1,9 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display'); */
 /* last update by sayan */
 body {
   background-color: black;
   background-repeat: repeat;
   /* color: white; */
   font-family: 'Oswald', sans-serif;
+  /* font-family: 'Sedgwick Ave Display', cursive; */
   letter-spacing: .2rem;
   margin: 0;
   overflow: hidden;
@@ -221,7 +223,7 @@ h1 {
 }
 .panel_nav--left {
   left: 1rem;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%) rotate(-90deg) translateX(-100%);
   transform-origin: top left;
 }
@@ -235,9 +237,9 @@ h1 {
 }
 .panel_nav--right {
   right: 1rem;
-  top: 60%;
-  transform: translateY(-50%) rotate(-90deg) translateX(100%);
-  transform-origin: bottom right;
+  top: 40%;
+  transform: translateY(-50%) rotate(90deg) translateX(100%);
+  transform-origin: top right;
 }
 .panel_nav--right-top {
   right: 1rem;
@@ -354,6 +356,7 @@ h1 {
 .subpanel h1{
   font-size: 10vmin;
   left: 40%;
+  top: 30%;
 }
 .subpanel p:before {
   position: absolute;
@@ -366,32 +369,60 @@ h1 {
 }  
 .show-all-title{
   font-size: 20vmin !important;
+  top: 50vmin !important;
 }
-/* .aboutpanel-add{
-  color: #000;
-} */
-#aboutpanel .bottom-content{
-  margin-top: 12%;
-  margin-right: 8%;
-  float: right;
+.hide-all-content{
+  display: none !important;
+}
+
+/* .bottom-content{ */
+  /* margin-top: 12%;
+  margin-right: 8%; */
+  /* float: right;
   width: 70%;
   text-align: right;
-}
-#aboutpanel .top-content{
-  margin-top: 5%;
-  text-align: left;
-  margin-left: 8%;
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+} */
+/* .top-content{ */
+  /* margin-top: 5%;
+  margin-left: 8%; */
+  /* text-align: left;
   float: left;
   width: 70%;
+  position: absolute;  
+  top: 10%;
+  left: 10%;
+} */
+.all-content{ */
+  margin-top: 5%;
+  margin-left: 8%; */
+  text-align: left;
+  float: left;
+  width: 70%;
+  position: absolute;  
+  top: 45%;
+  left: 10%;
 }
-#aboutpanel .right-content ul li{
+.right-content ul li{
   padding: 10%;
   list-style: none;
 }  
+
+/* .aboutpanel-add{
+  color: #000;
+} */
 /* styles for ds panel */
 #dspanel{
-  background-color: #FD5F00;
+  /* background-color: #FD5F00; */
+  background: url(../images/dsbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 /* styles for aoc panel */
 #aocpanel{
   background-color: #4666FF;
